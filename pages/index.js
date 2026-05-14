@@ -37,7 +37,7 @@ export default function Leaderboard({ data }) {
   return (
     <>
       <Head>
-        <title>GC4C Listings Leaderboard</title>
+        <title>GC4C Weekly Listings</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -48,7 +48,7 @@ export default function Leaderboard({ data }) {
       </Head>
 
       <div style={{
-        backgroundColor: '#112611',
+        backgroundColor: '#0a1a0f',
         minHeight: '100vh',
         padding: '24px 20px',
         fontFamily: "'Inter', sans-serif",
@@ -56,7 +56,6 @@ export default function Leaderboard({ data }) {
       }}>
         <div style={{ maxWidth: '680px', margin: '0 auto' }}>
 
-          {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '24px' }}>
             <div style={{ fontSize: '36px', lineHeight: 1, marginBottom: '8px' }}>🏆</div>
             <h1 style={{
@@ -67,7 +66,7 @@ export default function Leaderboard({ data }) {
               margin: 0,
               color: '#ffffff',
             }}>
-              Listings Leaderboard
+              Weekly Listings
             </h1>
             {data && (
               <p style={{
@@ -81,7 +80,6 @@ export default function Leaderboard({ data }) {
             )}
           </div>
 
-          {/* Leaderboard cards */}
           {data ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {sorted.map((loc, i) => {
@@ -90,7 +88,7 @@ export default function Leaderboard({ data }) {
                   <div
                     key={loc.name}
                     style={{
-                      backgroundColor: '#1a3d1a',
+                      backgroundColor: '#0d2318',
                       borderRadius: '14px',
                       padding: '18px 20px',
                       display: 'flex',
@@ -100,7 +98,6 @@ export default function Leaderboard({ data }) {
                       boxShadow: rank.glow,
                     }}
                   >
-                    {/* Rank badge */}
                     <div style={{
                       width: '44px',
                       height: '44px',
@@ -117,7 +114,6 @@ export default function Leaderboard({ data }) {
                       {i + 1}
                     </div>
 
-                    {/* Location name */}
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div style={{
                         fontWeight: 800,
@@ -132,7 +128,6 @@ export default function Leaderboard({ data }) {
                       </div>
                     </div>
 
-                    {/* Stats */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexShrink: 0 }}>
                       <div style={{ textAlign: 'center' }}>
                         <div style={{
@@ -183,7 +178,6 @@ export default function Leaderboard({ data }) {
             </div>
           )}
 
-          {/* Footer */}
           {data && (
             <div style={{
               textAlign: 'center',

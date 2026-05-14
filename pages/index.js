@@ -180,6 +180,41 @@ export default function Leaderboard({ data }) {
 
           {data && (
             <div style={{
+              backgroundColor: '#0d2318',
+              borderRadius: '14px',
+              padding: '18px 20px',
+              display: 'flex',
+              alignItems: 'center',
+              marginTop: '10px',
+              border: '1px solid rgba(255,255,255,0.08)',
+            }}>
+              <div style={{ flex: 1, fontWeight: 800, fontSize: '17px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                Company Total
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexShrink: 0 }}>
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{ fontSize: '10px', fontWeight: 600, color: '#6dab6d', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px' }}>
+                    This Week
+                  </div>
+                  <div style={{ fontSize: '30px', fontWeight: 900, lineHeight: 1, color: '#ffffff' }}>
+                    {sorted.reduce((sum, loc) => sum + loc.weekly, 0).toLocaleString()}
+                  </div>
+                </div>
+                <div style={{ width: '1px', height: '44px', backgroundColor: '#2d5a2d' }} />
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{ fontSize: '10px', fontWeight: 600, color: '#6dab6d', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px' }}>
+                    Today
+                  </div>
+                  <div style={{ fontSize: '30px', fontWeight: 900, lineHeight: 1, color: '#ffffff' }}>
+                    {sorted.reduce((sum, loc) => sum + loc.daily, 0).toLocaleString()}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {data && (
+            <div style={{
               textAlign: 'center',
               marginTop: '16px',
               fontSize: '11px',
